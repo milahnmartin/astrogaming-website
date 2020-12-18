@@ -1816,6 +1816,8 @@ a:hover.back-to-top {
 	margin-bottom: 3.625rem;
 }
 
+
+
 .ex-basic-2 .text-container.last {
 	margin-bottom: 0;
 }
@@ -2478,4 +2480,7 @@ body::-webkit-scrollbar {
 	color: #13aa87;
 	font-size: 70px;
 	padding: 0px 0px;
-  }
+	}
+	
+
+	
