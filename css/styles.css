@@ -1853,6 +1853,13 @@ a:hover.back-to-top {
 		margin-right: auto;
 		margin-left: auto;
 	}
+	
+	.form-info{
+		position: relative;
+		left: 1000px;
+	}
+
+	
 	/* end of general styles */
 
 
@@ -2033,6 +2040,10 @@ a:hover.back-to-top {
 	.p-heading {
 		width: 65%;
 	}
+
+	
+
+	
 	/* end of general styles */
 
 
@@ -2264,6 +2275,8 @@ a:hover.back-to-top {
 	.p-heading {
 		width: 55%;
 	}
+
+	
 	/* end of general styles */
 
 
@@ -2445,6 +2458,8 @@ a:hover.back-to-top {
 		padding-right: 12rem;
 		padding-left: 12rem;
 	}
+
+
 	/* end of navigation */
 }
 /* end of min-width width 1200px */
@@ -2482,5 +2497,30 @@ body::-webkit-scrollbar {
 	padding: 0px 0px;
 	}
 	
+	#contactform input,label{
+		position: relative;
+		display: inline-block;
+		flex-direction: column;
+		
+	}
 
+	#failingg{
+		position: relative;
+		top: 20px;
+		width: 502px;
+	}
+
+	.form-info{
+		position: relative;
+		top: 35px;
+		left: 90px;
+	}
 	
+	input{
+		width: 500px;
+	}
+
+	label{
+		color: #484a46;
+	font: 700 1.375rem/1.75rem "Montserrat", sans-serif;
+	}
