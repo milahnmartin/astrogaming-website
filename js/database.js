@@ -2,6 +2,10 @@
 
 
 
+MONGO_INFO = process.env.MONGO_INFO;
+
+
+
 
 
 function getInputValue(){

@@ -2501,19 +2501,25 @@ body::-webkit-scrollbar {
 		position: relative;
 		display: inline-block;
 		flex-direction: column;
+		height: 40px;
 		
+	}
+	label{
+		position: relative;
+		top: 20px;
 	}
 
 	#failingg{
 		position: relative;
-		top: 20px;
+		top: 45px;
 		width: 502px;
 	}
 
 	.form-info{
 		position: relative;
-		top: 35px;
+		top: -20px;
 		left: 90px;
+		
 	}
 	
 	input{
@@ -2522,5 +2528,12 @@ body::-webkit-scrollbar {
 
 	label{
 		color: #484a46;
-	font: 700 1.375rem/1.75rem "Montserrat", sans-serif;
+	font: 700 1.175rem/1.45rem "Montserrat", sans-serif;
+	}
+
+
+	#the-form{
+		position: relative;
+		top: 30px;
+		
 	}
