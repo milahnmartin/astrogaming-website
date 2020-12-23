@@ -1,36 +1,45 @@
-// INPUT FORM 
+var express = require("express");
+var app = express();
+var port = 3001;
 
-
-
-
-MONGO_INFO = process.env.MONGO_INFO;
-
-$(function() {
-
-
-  
-  $( "#failingg" ).click(function() {
-    $( "#spiral" ).toggle( "slow", function() {
-      // Animation complete.
-    });
-  });
-
-});
-
-  
-
-
-
-function getInputValue(){
-  // Selecting the input element and get its value 
-let mycontactfname = document.getElementById('fname').value;
-let mycontactlname = document.getElementById('lname').value;
-let mycontactage = document.getElementById('fage').value;
-const thebutton = document.getElementById('failingg').innerHTML= 'MESSAGE SUBMITTED !';
-
-
+var players = {
+  Travis: {
+    mouse: 'polla',
+    keyboard: 'kolla',
+    age: 19,
+    gamertag: 'Trv'
+  },
+  Milahn: {
+    mouse: 'jolla',
+    keyboard: 'lpppa',
+    age: 20,
+    gamertag: 'Polla'
+  }
 
 };
+
+
+
+
+
+
+
+
+app.get("/users", (req, res) => {
+  res.send(players);
+});
+
+
+
+ 
+app.listen(port, () => {
+  console.log("SERVER IS UP AND LISTENING " + port);
+});
+
+
+
+
+
 
 
 
