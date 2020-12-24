@@ -339,6 +339,8 @@
     //     $("input").removeClass('notEmpty'); // resets the field label after submission
     // }
 
+    
+
     function pformError() {
         $("#privacyForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
             $(this).removeClass();
@@ -417,7 +419,7 @@ $(function() {
   $( "#failingg" ).click(function() {
     $( "#spiral" ).toggle( "slow", function() {
         setTimeout(function(){ $("#spiral").toggle("fast", function(){
-            setTimeout(function(){ $('#failingg').html('SUBMIT MESSAGE')}, 3000);
+            setTimeout(function(){ $('#failingg').html('SUBMIT MESSAGE')}, 1000);
         }) }, 3000);
 
     });
@@ -425,7 +427,6 @@ $(function() {
 
 });
 
-  
 
 
 
@@ -433,9 +434,35 @@ function getInputValue(){
   // Selecting the input element and get its value 
 let mycontactfname = document.getElementById('fname').value;
 let mycontactlname = document.getElementById('lname').value;
-let mycontactage = document.getElementById('fage').value;
+let mycontactmessage = document.getElementById('fage').value;
+let myemail = document.getElementById('email').value;
 const thebutton = document.getElementById('failingg').innerHTML= 'MESSAGE SUBMITTED !';
-Http.send()
+
+
+
+
+var data = {
+    service_id: 'service_hzywgqk',
+    template_id: 'template_hhw5rum',
+    user_id: 'user_ypbwG8QWczPr59Vt8Geoc',
+    template_params: {
+        'username': mycontactfname,
+        'surname': mycontactlname,
+        'message': mycontactmessage,
+        'email': myemail,
+        'g-recaptcha-response': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...'
+    }
+};
+ 
+$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+    type: 'POST',
+    data: JSON.stringify(data),
+    contentType: 'application/json'
+}).done(function() {
+    console.log('Your mail is sent!');
+}).fail(function(error) {
+    console.error('Oops... ' + JSON.stringify(error));
+});
 
 
 
