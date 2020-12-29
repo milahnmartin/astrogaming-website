@@ -439,8 +439,6 @@ let myemail = document.getElementById('email').value;
 const thebutton = document.getElementById('failingg').innerHTML= 'MESSAGE SUBMITTED !';
 
 
-
-
 var data = {
     service_id: 'service_hzywgqk',
     template_id: 'template_hhw5rum',
