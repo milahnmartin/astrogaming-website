@@ -2569,3 +2569,41 @@ body::-webkit-scrollbar {
 		0% { transform: rotate(0deg); }
 		100% { transform: rotate(360deg); }
 	}
+
+
+@media(max-width: 576px){
+	body{
+		max-width: 576px !important;
+		overflow: hidden !important;
+	}
+	#my-form{
+		display: block !important;
+		position: relative;
+		left: 20px !important;
+		width: 375px !important;
+
+
+		
+	}
+
+	#contactForm input{
+		max-width: 305px !important;
+	}
+
+	#failingg{
+		position: relative !important;
+		width: 305px !important;
+	}
+
+	.navbar{
+		max-width: 375px !important;
+	}
+
+	.astro-header{
+		font-size: 50px !important;
+	}
+	.back-to-top{
+		display: none !important;
+	
+	}
+}
