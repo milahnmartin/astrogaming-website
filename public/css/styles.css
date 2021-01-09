@@ -2569,41 +2569,49 @@ body::-webkit-scrollbar {
 		0% { transform: rotate(0deg); }
 		100% { transform: rotate(360deg); }
 	}
+	@media(width:375px){
+		html{
+			width: 375px !important;
+			overflow: hidden !important;
+			align-content: flex-end;
+		}
+		.navbar{
+			width: 375px !important;
+		}
+	}
 
 
 @media(max-width: 576px){
-	body{
-		max-width: 576px !important;
-		overflow: hidden !important;
+
+	html{
+		max-width: fit-content !important;
+		overflow:  unset !important;
 	}
+	
 	#my-form{
 		display: block !important;
 		position: relative;
-		left: 20px !important;
+		left: 13px !important;
 		width:auto!important;
-
-
 		
 	}
 
 	#contactForm input{
-		max-width: 305px !important;
+		max-width: 270px !important;
 	}
 
 	#failingg{
 		position: relative !important;
-		width: 305px !important;
+		width: 270px !important;
 	}
 
 	.navbar{
 		max-width: 576px !important;
+		overflow: hidden !important;
 	}
 
 	.astro-header{
 		font-size: 50px !important;
 	}
-	.back-to-top{
-		display: none !important;
 	
-	}
 }
