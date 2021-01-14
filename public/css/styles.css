@@ -2569,16 +2569,7 @@ body::-webkit-scrollbar {
 		0% { transform: rotate(0deg); }
 		100% { transform: rotate(360deg); }
 	}
-	@media(width:375px){
-		html{
-			width: 375px !important;
-			overflow: hidden !important;
-			align-content: flex-end;
-		}
-		.navbar{
-			width: 375px !important;
-		}
-	}
+	
 
 
 @media(max-width: 576px){
