@@ -438,32 +438,14 @@ let mycontactmessage = document.getElementById('fage').value;
 let myemail = document.getElementById('email').value;
 const thebutton = document.getElementById('failingg').innerHTML= 'MESSAGE SUBMITTED !';
 
+const whurl = "https://discordapp.com/api/webhooks/799604521319006248/TpRyHkxC0GIMhnauprJz6SrcdF2UsONew4dWCa2WKUOGlceVOh5WcQTrpQxWhgG8_4iJ";
 
-var data = {
-    service_id: 'service_hzywgqk',
-    template_id: 'template_hhw5rum',
-    user_id: 'user_ypbwG8QWczPr59Vt8Geoc',
-    template_params: {
-        'username': mycontactfname,
-        'surname': mycontactlname,
-        'message': mycontactmessage,
-        'email': myemail,
-        'g-recaptcha-response': '03AHJ_ASjnLA214KSNKFJAK12sfKASfehbmfd...'
-    }
-};
- 
-$.ajax('https://api.emailjs.com/api/v1.0/email/send', {
-    type: 'POST',
-    data: JSON.stringify(data),
-    contentType: 'application/json'
-}).done(function() {
-    console.log('Your mail is sent!');
-}).fail(function(error) {
-    console.error('Oops... ' + JSON.stringify(error));
-});
+let msg = {
+    "content": "Name: " + mycontactfname +  " Surname: " + mycontactlname + " Email: " + myemail + " Messgae: " + mycontactmessage
+}
 
-
-
+fetch(whurl, {"method":"POST","headers":{"content-type":"application/json"},
+"body": JSON.stringify(msg)});
 };
 
 
