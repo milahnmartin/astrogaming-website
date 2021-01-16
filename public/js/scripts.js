@@ -441,7 +441,7 @@ const thebutton = document.getElementById('failingg').innerHTML= 'MESSAGE SUBMIT
 const whurl = "https://discordapp.com/api/webhooks/799604521319006248/TpRyHkxC0GIMhnauprJz6SrcdF2UsONew4dWCa2WKUOGlceVOh5WcQTrpQxWhgG8_4iJ";
 
 let msg = {
-    "content": "Name: " + mycontactfname +  " Surname: " + mycontactlname + " Email: " + myemail + " Messgae: " + mycontactmessage
+    "content": "Name: " + mycontactfname +  " Surname: " + mycontactlname + " Email: " + myemail + " Message: " + mycontactmessage
 }
 
 fetch(whurl, {"method":"POST","headers":{"content-type":"application/json"},
